@@ -2,7 +2,13 @@
 
 A privacy-safe portfolio implementation of a monthly malaria reporting workflow for DHIS2. It demonstrates requirements analysis, aggregate metadata design, data-quality controls, indicator definitions, reporting workflows, and dashboard planning using reproducible synthetic data.
 
+[**Open the live dashboard →**](https://malaria-reporting-case-study.streamlit.app/)
+
+**Technology:** Python · Streamlit · Pandas · Plotly · DHIS2-compatible aggregate data
+
 > **Independent demonstration:** This project is not an official implementation of DHIS2, PATH, WHO, NMEP, BRAC, the Government of Bangladesh, or any other institution. Every record is synthetic and must not be used for operational or clinical decisions.
+
+![Malaria Programme Overview dashboard](docs/screenshots/dashboard-overview.png)
 
 ## What this project demonstrates
 
@@ -67,6 +73,26 @@ python -m streamlit run app.py
 
 The dashboard provides filters, programme KPIs, monthly trends, facility comparisons, case-origin analysis, reporting-completeness review, and a download of the selected synthetic records.
 
+## Dashboard walkthrough
+
+### Facility burden and case origin
+
+Compare confirmed cases across facilities and review the distribution of indigenous and imported cases.
+
+![Facility comparison and case-origin distribution](docs/screenshots/facility-and-case-origin.png)
+
+### Reporting and commodity review
+
+Review test positivity, reporting completeness, confirmed cases, and cumulative stock-out days in one operational table.
+
+![Reporting and commodity review](docs/screenshots/reporting-and-commodity-review.png)
+
+### Interactive filtering
+
+Filters recalculate KPIs and visualizations for selected upazilas, facilities, and reporting periods.
+
+![Filtered upazila analysis](docs/screenshots/filtered-upazila-analysis.png)
+
 The generator creates:
 
 - `data/synthetic_malaria_monthly.csv`: human-readable analytical dataset
@@ -121,6 +147,8 @@ Analytical outputs should use indicators and relative periods/organisation units
 - [x] Reproducible synthetic data
 - [x] Automated data-integrity checks
 - [x] Runnable analytical dashboard
+- [x] Public Streamlit deployment
+- [x] Dashboard screenshots and walkthrough
 - [ ] Configure in a blank DHIS2 test instance
 - [ ] Capture configuration screenshots
 - [ ] Export dependency-aware metadata JSON
