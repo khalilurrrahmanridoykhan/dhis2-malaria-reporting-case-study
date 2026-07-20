@@ -82,7 +82,7 @@ with left:
     st.subheader("Confirmed cases by month")
     st.plotly_chart(
         px.line(monthly, x="month", y="confirmed_cases", markers=True, labels={"confirmed_cases": "Cases"}),
-        use_container_width=True,
+        width="stretch",
     )
 with right:
     st.subheader("Test positivity by month")
@@ -94,7 +94,7 @@ with right:
             markers=True,
             labels={"test_positivity_pct": "Positivity (%)"},
         ),
-        use_container_width=True,
+        width="stretch",
     )
 
 facility_summary = (
@@ -126,7 +126,7 @@ with left:
             orientation="h",
             labels={"confirmed_cases": "Cases", "facility": "Facility"},
         ),
-        use_container_width=True,
+        width="stretch",
     )
 with right:
     st.subheader("Case-origin distribution")
@@ -136,7 +136,7 @@ with right:
             "Cases": [filtered["indigenous_cases"].sum(), filtered["imported_cases"].sum()],
         }
     )
-    st.plotly_chart(px.pie(origin, names="Origin", values="Cases", hole=0.55), use_container_width=True)
+    st.plotly_chart(px.pie(origin, names="Origin", values="Cases", hole=0.55), width="stretch")
 
 st.subheader("Reporting and commodity review")
 reporting_table = facility_summary[
@@ -157,7 +157,7 @@ reporting_table["reporting_completeness_pct"] = reporting_table[
 ].map(lambda value: f"{value:.1f}%")
 st.dataframe(
     reporting_table,
-    use_container_width=True,
+    width="stretch",
     hide_index=True,
 )
 
