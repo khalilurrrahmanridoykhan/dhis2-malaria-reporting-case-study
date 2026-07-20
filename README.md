@@ -62,7 +62,7 @@ python3 -m unittest discover -s tests -v
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-streamlit run app.py
+python -m streamlit run app.py
 ```
 
 The dashboard provides filters, programme KPIs, monthly trends, facility comparisons, case-origin analysis, reporting-completeness review, and a download of the selected synthetic records.

@@ -139,19 +139,24 @@ with right:
     st.plotly_chart(px.pie(origin, names="Origin", values="Cases", hole=0.55), use_container_width=True)
 
 st.subheader("Reporting and commodity review")
+reporting_table = facility_summary[
+    [
+        "upazila",
+        "facility",
+        "confirmed_cases",
+        "test_positivity_pct",
+        "reporting_completeness_pct",
+        "stockout_days",
+    ]
+].copy()
+reporting_table["test_positivity_pct"] = reporting_table["test_positivity_pct"].map(
+    lambda value: f"{value:.1f}%"
+)
+reporting_table["reporting_completeness_pct"] = reporting_table[
+    "reporting_completeness_pct"
+].map(lambda value: f"{value:.1f}%")
 st.dataframe(
-    facility_summary[
-        [
-            "upazila",
-            "facility",
-            "confirmed_cases",
-            "test_positivity_pct",
-            "reporting_completeness_pct",
-            "stockout_days",
-        ]
-    ].style.format(
-        {"test_positivity_pct": "{:.1f}%", "reporting_completeness_pct": "{:.1f}%"}
-    ),
+    reporting_table,
     use_container_width=True,
     hide_index=True,
 )
@@ -162,4 +167,3 @@ st.download_button(
     file_name="filtered_synthetic_malaria_data.csv",
     mime="text/csv",
 )
-
