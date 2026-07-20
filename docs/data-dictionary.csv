@@ -1,0 +1,19 @@
+code,name,domain_type,value_type,aggregation_type,zero_is_significant,dataset_section,description
+MAL_SUSPECTED,Suspected malaria cases,AGGREGATE,INTEGER,SUM,true,Case detection,People meeting the programme suspected-case definition during the month
+MAL_TEST_RDT,People tested by RDT,AGGREGATE,INTEGER,SUM,true,Laboratory testing,People receiving a malaria rapid diagnostic test during the month
+MAL_TEST_MIC,People tested by microscopy,AGGREGATE,INTEGER,SUM,true,Laboratory testing,People receiving malaria microscopy during the month
+MAL_CONFIRMED,Confirmed malaria cases,AGGREGATE,INTEGER,SUM,true,Confirmed cases,Laboratory-confirmed malaria cases during the month
+MAL_PF,Plasmodium falciparum cases,AGGREGATE,INTEGER,SUM,true,Confirmed cases,Confirmed P. falciparum mono-infections
+MAL_PV,Plasmodium vivax cases,AGGREGATE,INTEGER,SUM,true,Confirmed cases,Confirmed P. vivax mono-infections
+MAL_MIXED,Mixed malaria infections,AGGREGATE,INTEGER,SUM,true,Confirmed cases,Confirmed mixed-species infections
+MAL_SEVERE,Severe malaria cases,AGGREGATE,INTEGER,SUM,true,Treatment and outcomes,Confirmed cases meeting the severe-malaria definition
+MAL_DEATHS,Malaria deaths,AGGREGATE,INTEGER,SUM,true,Treatment and outcomes,Deaths attributed to malaria during the month
+MAL_TREATED,Confirmed cases treated,AGGREGATE,INTEGER,SUM,true,Treatment and outcomes,Confirmed cases receiving programme-approved treatment
+MAL_LLIN,LLINs distributed,AGGREGATE,INTEGER,SUM,true,Commodities,Long-lasting insecticidal nets distributed during the month
+MAL_STOCKOUT,Malaria commodity stock-out days,AGGREGATE,INTEGER,SUM,true,Commodities,Number of days with a stock-out of a required malaria commodity
+MAL_REPORT_EXPECTED,Reports expected,AGGREGATE,INTEGER,SUM,true,Reporting performance,Number of reports expected for the reporting unit and month
+MAL_REPORT_RECEIVED,Reports received,AGGREGATE,INTEGER,SUM,true,Reporting performance,Number of reports received for the reporting unit and month
+MAL_INDIGENOUS,Indigenous malaria cases,AGGREGATE,INTEGER,SUM,true,Case origin,Confirmed cases classified as locally acquired
+MAL_IMPORTED,Imported malaria cases,AGGREGATE,INTEGER,SUM,true,Case origin,Confirmed cases classified as imported
+POP_EST,Estimated catchment population,AGGREGATE,INTEGER,LAST,true,Denominators,Estimated population used for incidence calculation
+

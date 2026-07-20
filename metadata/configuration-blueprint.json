@@ -1,0 +1,45 @@
+{
+  "artifactType": "DHIS2 aggregate configuration design blueprint",
+  "importable": false,
+  "status": "Requires configuration and validation in a blank DHIS2 test instance",
+  "package": {
+    "name": "Monthly Malaria Facility Report — DEMO",
+    "periodType": "Monthly",
+    "dataSetCode": "MAL_MONTHLY_DEMO",
+    "organisationUnitEntryLevel": "Facility",
+    "syntheticDataOnly": true
+  },
+  "organisationUnitLevels": [
+    "Demo Country",
+    "Division",
+    "District",
+    "Upazila",
+    "Facility"
+  ],
+  "datasetSections": [
+    "Case detection",
+    "Laboratory testing",
+    "Confirmed cases",
+    "Treatment and outcomes",
+    "Commodities",
+    "Reporting performance"
+  ],
+  "indicatorCodes": [
+    "MAL_TEST_POS_RATE",
+    "MAL_INCIDENCE_1000",
+    "MAL_CASE_FATALITY",
+    "MAL_TREATMENT_COVERAGE",
+    "MAL_REPORTING_COMPLETENESS",
+    "MAL_PF_PROPORTION",
+    "MAL_IMPORTED_PROPORTION",
+    "MAL_SEVERE_PROPORTION"
+  ],
+  "dashboard": {
+    "name": "Malaria Programme Overview — DEMO",
+    "usesIndicatorsOnly": true,
+    "usesRelativePeriods": true,
+    "usesRelativeOrganisationUnits": true
+  },
+  "notice": "This blueprint is independent portfolio work and is not endorsed by DHIS2, PATH, WHO, NMEP, BRAC, or the Government of Bangladesh."
+}
+
